@@ -18,5 +18,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r"polls", include("radiance.url"))
+    url(r"^polls/", include("radiance.urls"))
 ]
