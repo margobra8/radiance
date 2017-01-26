@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Radiance</title>
+</head>
+<body>
+
+{% if latest_questions %}
+    {% for question in latest_questions %}
+        <ul>
+        <a href="/polls/{{question.id}}"><strong>{{question.question_text}}</strong></a>
+        </ul>
+    {% endfor %}
+{% else %}
+    <strong>You don't have any questions. Please add some.</strong>
+{% endif %}
+
+
+</body>
+</html>
